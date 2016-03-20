@@ -1,0 +1,37 @@
+{
+    "user":{
+        "xxx":{
+            "username":"your name",
+            "password":"your password",
+            "dir":"local direction",
+            "http":"http address"
+        }
+    },
+    "storage":{
+        "username":"your name",
+        "password":"your password",
+        "dir":"local direction",
+        "url":"url address"
+    },
+    "article":{
+        "raw_file":"xxx",
+        "h_tmpl_file":"xxx",
+        "h_file":"xxx",
+        "body_file":"xxx",
+        "title":"xxxxx",
+        "cate":"yyyyy",
+        "date":"%Y-%m-%d-%H%M",
+        "pic_url_match":"(.*)(![[])([a-zA-Z0-9]+)([]])([(])([a-zA-Z0-9._]+)([)])(.*)"
+    },
+    "media":{
+        "buff_dir":"xxx"
+    },
+    "email":{
+        "server":"xxx",
+        "email":"xx",
+        "password":"bbb"
+    },
+    "config":{
+        "fname":"...."
+    }
+}
