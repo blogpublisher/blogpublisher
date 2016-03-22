@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # encoding: utf-8
-def tohex(self, s):
+def tohex(s):
     listhex = []
     listmix = []
     liststr = []

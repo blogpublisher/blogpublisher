@@ -156,6 +156,9 @@ class Blog:
         dir = self.db.get_info('storage', 'dir')
         git_tool.git_expect(dir, u, p)
 
+    def authinfo(self):
+        return self.db.get_info('user', self.blog_name)
+
 class BlogJetty(Blog):
     def __init__(self,article_categories, blog_title, blog_name):
         Blog.__init__(self, article_categories, blog_title, blog_name)
@@ -186,7 +189,7 @@ class BlogJetty(Blog):
         url = self.db.get_info('user', self.blog_name, 'http')
         txt = 'your blog has published!\r\n\r\n %s' % url
         s = MyMail('smtp.xxx', 'xxx', 'xxx')
-        s.send(self.article_title, txt)
+        s.send('Blog publish successful:' + self.article_title, txt)
 
 
 if __name__ == '__main__':

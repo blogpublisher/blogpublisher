@@ -29,10 +29,16 @@ class JsonDbJetty(JsonDb):
         JsonDb.open(self)
         JsonDb.read(self)
         cxt = JsonDb.get_dict(self)
+
+        if not cxt[info].has_key(l1):
+            print 'not the key....'
+            return None
+
         if not l2 == None:
             value = cxt[info][l1][l2]
         else:
             value = cxt[info][l1]
+
         JsonDb.close(self)
         return value
 
